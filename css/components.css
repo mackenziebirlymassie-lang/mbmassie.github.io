@@ -1,0 +1,645 @@
+/**
+ * REUSABLE UI COMPONENTS & DESIGN SYSTEM
+ * Inspired by Ryoku Architectural Interface
+ * Enforcing UI/UX ProMax 8pt Scale & 6-State Interactive Completeness
+ */
+
+/* ==========================================================================
+   1. Eyebrows & System Badges
+   ========================================================================== */
+.eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--s2);
+    margin-bottom: var(--s3);
+}
+
+.eyebrow .jp {
+    font-family: var(--f-jp);
+    color: var(--ink);
+    font-weight: 700;
+    font-size: 1.05rem;
+    line-height: 1;
+}
+
+.eye-label {
+    color: var(--ink-faint);
+    font-family: var(--f-mono);
+    font-size: 0.6875rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+.coord-badge {
+    font-family: var(--f-mono);
+    font-size: 0.6875rem;
+    letter-spacing: 0.16em;
+    color: var(--ink-faint);
+    text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
+    gap: var(--s2);
+    margin-bottom: var(--s2);
+}
+
+.coord-dot {
+    width: 4px;
+    height: 4px;
+    background: var(--sun);
+    border-radius: 50%;
+    animation: beacon 2s infinite ease-in-out;
+}
+
+/* Distro & Tech Stack Rail Pills */
+.rail {
+    display: flex;
+    align-items: center;
+    gap: var(--s2);
+    flex-wrap: wrap;
+    margin-bottom: var(--s3);
+}
+
+.rail-label {
+    font-family: var(--f-mono);
+    font-size: 0.625rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    margin-right: var(--s1);
+}
+
+.rail-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-family: var(--f-mono);
+    font-size: 0.6875rem;
+    color: var(--ink-dim);
+    padding: 0.2rem 0.55rem;
+    background: var(--paper-raised);
+    border: 1px solid var(--line-soft);
+    border-radius: 999px;
+    transition: all var(--move) var(--ease-out);
+}
+
+.rail-pill:hover {
+    border-color: var(--line-strong);
+    color: var(--ink);
+    background: var(--paper-card);
+}
+
+/* ==========================================================================
+   2. Buttons & 6-State Interactive Completeness (UI/UX ProMax Rule 2)
+   States: Default, Hover, Active, Focus-Visible, Disabled, Loading
+   ========================================================================== */
+.btn {
+    align-items: center;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    color: var(--ink);
+    cursor: pointer;
+    display: inline-flex;
+    font-family: var(--f-mono);
+    font-size: 0.75rem;
+    font-weight: 500;
+    gap: var(--s2);
+    justify-content: center;
+    letter-spacing: 0.1em;
+    padding: 0.625rem 1.25rem;
+    text-transform: uppercase;
+    background: transparent;
+    user-select: none;
+    position: relative;
+    overflow: hidden;
+    transition:
+        background-color var(--snap) var(--ease-quad),
+        color            var(--snap) var(--ease-quad),
+        border-color     var(--snap) var(--ease-quad),
+        transform        var(--snap) var(--ease-quad),
+        box-shadow       var(--snap) var(--ease-quad),
+        opacity          var(--snap) var(--ease-quad);
+}
+
+/* Button Hover State */
+.btn:hover:not(:disabled):not(.is-loading) {
+    border-color: var(--line-strong);
+    background: var(--tint5);
+    color: var(--bone-hover);
+    transform: translateY(-2px);
+}
+
+/* Button Active State */
+.btn:active:not(:disabled):not(.is-loading) {
+    transform: translateY(0);
+    background: var(--tint10);
+    border-color: var(--ink-muted);
+}
+
+/* Button Focus-Visible State (Accessibility) */
+.btn:focus-visible {
+    outline: 2px solid var(--bone);
+    outline-offset: 2px;
+}
+
+/* Button Disabled State */
+.btn:disabled,
+.btn[aria-disabled="true"] {
+    opacity: 0.4;
+    cursor: not-allowed;
+    pointer-events: none;
+    border-color: var(--line-soft);
+    color: var(--ink-faint);
+}
+
+/* Button Loading State */
+.btn.is-loading {
+    cursor: wait;
+    pointer-events: none;
+    position: relative;
+    color: transparent !important;
+}
+
+.btn.is-loading::after {
+    content: '';
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    top: calc(50% - 7px);
+    left: calc(50% - 7px);
+    border: 2px solid var(--bone);
+    border-right-color: transparent;
+    border-radius: 50%;
+    animation: btnSpin 0.6s linear infinite;
+}
+
+@keyframes btnSpin {
+    to { transform: rotate(360deg); }
+}
+
+.btn-lg {
+    padding: 0.8125rem 1.625rem;
+    font-size: 0.8125rem;
+}
+
+/* Solid Bone Button Variant (High-Contrast Hero CTA) */
+.btn-solid {
+    background: var(--bone);
+    border-color: var(--bone);
+    color: var(--ink-on-bone);
+    font-weight: 600;
+}
+
+.btn-solid:hover:not(:disabled):not(.is-loading) {
+    background: var(--bone-hover);
+    border-color: var(--bone-hover);
+    color: var(--ink-on-bone);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(205, 196, 186, 0.2);
+}
+
+.btn-solid:active:not(:disabled):not(.is-loading) {
+    background: var(--bone-active);
+    border-color: var(--bone-active);
+    transform: translateY(0);
+}
+
+.btn-solid:focus-visible {
+    outline: 2px solid var(--bone);
+    outline-offset: 3px;
+}
+
+.btn-solid.is-loading::after {
+    border-color: var(--paper);
+    border-right-color: transparent;
+}
+
+/* Outline Button Variant */
+.btn-outline {
+    background: transparent;
+    border-color: var(--line);
+    color: var(--ink);
+}
+
+.btn-outline:hover:not(:disabled):not(.is-loading) {
+    background: var(--tint10);
+    border-color: var(--bone);
+    color: var(--bone);
+}
+
+/* ==========================================================================
+   3. Architectural Cards & Surfaces (UI/UX ProMax Rule 3 - Depth Hierarchy)
+   ========================================================================== */
+.card {
+    background: var(--paper-raised);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: var(--s5);
+    transition:
+        border-color     var(--move) var(--ease-out),
+        transform        var(--move) var(--ease-out),
+        background-color var(--move) var(--ease-out),
+        box-shadow       var(--move) var(--ease-out);
+}
+
+.card:hover {
+    border-color: var(--line-strong);
+    background: var(--paper-card);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.7);
+}
+
+.blueprint-card {
+    position: relative;
+}
+
+.blueprint-card::before {
+    content: '+';
+    position: absolute;
+    top: -7px;
+    left: -5px;
+    font-family: var(--f-mono);
+    font-size: 11px;
+    color: var(--line-strong);
+    pointer-events: none;
+    line-height: 1;
+    transition: color var(--move) var(--ease-out);
+}
+
+.blueprint-card::after {
+    content: '+';
+    position: absolute;
+    bottom: -6px;
+    right: -5px;
+    font-family: var(--f-mono);
+    font-size: 11px;
+    color: var(--line-strong);
+    pointer-events: none;
+    line-height: 1;
+    transition: color var(--move) var(--ease-out);
+}
+
+.blueprint-card:hover::before,
+.blueprint-card:hover::after {
+    color: var(--ink-faint);
+}
+
+/* ==========================================================================
+   4. Specs with Dotted Leaders (Signature Ryoku Spec Layout)
+   ========================================================================== */
+.specs {
+    border-top: 1px solid var(--line-soft);
+    margin-block: var(--s4);
+}
+
+.spec {
+    border-bottom: 1px solid var(--line-soft);
+    display: flex;
+    align-items: baseline;
+    gap: var(--s3);
+    padding-block: 0.625rem;
+}
+
+.spec__k {
+    flex: 0 0 auto;
+    color: var(--ink-muted);
+    font-family: var(--f-sans);
+    font-size: 0.6875rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.spec__lead {
+    border-bottom: 1px dotted var(--line-strong);
+    flex: 1;
+    height: 0;
+    transform: translateY(-0.25em);
+    min-width: 16px;
+}
+
+.spec__v {
+    color: var(--ink);
+    font-family: var(--f-mono);
+    font-size: 0.8125rem;
+    text-align: right;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@media (max-width: 640px) {
+    .spec {
+        flex-wrap: wrap;
+        gap: var(--s1);
+    }
+    .spec__lead {
+        display: none;
+    }
+    .spec__v {
+        text-align: left;
+        white-space: normal;
+        width: 100%;
+    }
+}
+
+/* ==========================================================================
+   5. Vitals KPI Metrics Blocks
+   ========================================================================== */
+.vitals {
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    display: flex;
+    background: var(--paper-raised);
+    margin-block: var(--s4);
+}
+
+.vital {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: var(--s1);
+    padding: var(--s3) var(--s4);
+    min-width: 0;
+}
+
+.vital + .vital {
+    border-left: 1px solid var(--line);
+}
+
+.vital__n {
+    font-family: var(--f-display);
+    font-size: 1.625rem;
+    font-weight: 600;
+    color: var(--ink);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+}
+
+.vital__l {
+    font-family: var(--f-mono);
+    font-size: 0.625rem;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+}
+
+@media (max-width: 640px) {
+    .vitals {
+        flex-wrap: wrap;
+    }
+    .vital {
+        flex: 1 0 48%;
+    }
+    .vital:nth-child(3),
+    .vital:nth-child(4) {
+        border-top: 1px solid var(--line);
+    }
+    .vital:nth-child(2n+1) {
+        border-left: none;
+    }
+}
+
+/* ==========================================================================
+   6. CLI Interactive Terminal Box
+   ========================================================================== */
+.cli-box {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--s3);
+    background: var(--paper-raised);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 0.5rem 0.875rem;
+    margin-top: var(--s4);
+    font-family: var(--f-mono);
+    font-size: 0.75rem;
+    color: var(--ink-dim);
+    cursor: pointer;
+    transition:
+        border-color var(--snap) var(--ease-quad),
+        background-color var(--snap) var(--ease-quad),
+        transform var(--snap) var(--ease-quad);
+    user-select: none;
+}
+
+.cli-box:hover {
+    border-color: var(--line-strong);
+    background: var(--paper-card);
+    transform: translateY(-1px);
+}
+
+.cli-box:active {
+    transform: translateY(0);
+}
+
+.cli-box:focus-visible {
+    outline: 2px solid var(--bone);
+    outline-offset: 2px;
+}
+
+.cli-prompt {
+    color: var(--sun);
+    font-weight: 700;
+}
+
+.cli-cmd {
+    color: var(--ink);
+}
+
+.cli-badge {
+    font-size: 0.625rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    padding: 0.15rem 0.45rem;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    margin-left: var(--s2);
+    transition: all var(--snap) var(--ease-quad);
+}
+
+.cli-box:hover .cli-badge {
+    color: var(--ink);
+    border-color: var(--ink-faint);
+    background: var(--tint5);
+}
+
+/* ==========================================================================
+   7. Right-Edge Vertical HUD Navigation (Ryoku Scroll Indicator)
+   ========================================================================== */
+.hud-nav {
+    position: fixed;
+    right: clamp(0.75rem, 1.5vw, 1.5rem);
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: var(--s2);
+    z-index: 90;
+    pointer-events: auto;
+}
+
+.hud-tick {
+    width: 10px;
+    height: 2px;
+    background: var(--line-strong);
+    transition: all var(--move) var(--ease-out);
+    border-radius: 1px;
+    display: block;
+    cursor: pointer;
+}
+
+.hud-tick:hover,
+.hud-tick.active {
+    width: 20px;
+    background: var(--bone);
+    box-shadow: 0 0 8px rgba(205, 196, 186, 0.5);
+}
+
+@media (max-width: 900px) {
+    .hud-nav {
+        display: none;
+    }
+}
+
+/* ==========================================================================
+   8. Form Fields & Consent Elements (6 Complete States)
+   ========================================================================== */
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: var(--s1);
+    margin-bottom: var(--s3);
+}
+
+.field-label {
+    font-family: var(--f-mono);
+    font-size: 0.6875rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+}
+
+.field-input,
+.field-textarea {
+    background: var(--paper-raised);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    color: var(--ink);
+    font-family: var(--f-mono);
+    font-size: 0.8125rem;
+    padding: 0.625rem 0.875rem;
+    transition:
+        border-color var(--snap) var(--ease-quad),
+        background-color var(--snap) var(--ease-quad),
+        box-shadow var(--snap) var(--ease-quad);
+    width: 100%;
+}
+
+.field-textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.field-input:hover,
+.field-textarea:hover {
+    border-color: var(--line-strong);
+    background: var(--paper-card);
+}
+
+.field-input:focus,
+.field-textarea:focus {
+    border-color: var(--bone);
+    outline: none;
+    background: var(--paper-card);
+    box-shadow: 0 0 0 2px var(--tint10);
+}
+
+.field-input:disabled,
+.field-textarea:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+    background: var(--paper);
+}
+
+.field-consent {
+    margin-top: var(--s2);
+    padding: var(--s3);
+    background: var(--paper-raised);
+    border: 1px solid var(--line-soft);
+    border-radius: var(--radius);
+}
+
+.consent-label {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--s2);
+    cursor: pointer;
+    user-select: none;
+}
+
+.consent-checkbox {
+    margin-top: 0.15rem;
+    accent-color: var(--bone);
+    cursor: pointer;
+    width: 14px;
+    height: 14px;
+    flex-shrink: 0;
+}
+
+.consent-checkbox:focus-visible {
+    outline: 2px solid var(--bone);
+    outline-offset: 2px;
+}
+
+.consent-text {
+    font-size: 0.75rem;
+    line-height: 1.5;
+    color: var(--ink-muted);
+}
+
+.consent-text a {
+    color: var(--ink);
+    border-bottom: 1px solid var(--line);
+    transition: border-color var(--snap) var(--ease-quad);
+}
+
+.consent-text a:hover {
+    border-color: var(--ink);
+}
+
+/* Keyboard Guide & Legal Badges */
+.kbd-guide {
+    font-family: var(--f-mono);
+    font-size: 0.65rem;
+    letter-spacing: 0.12em;
+    color: var(--ink-faint);
+    display: inline-flex;
+    align-items: center;
+    gap: var(--s1);
+}
+
+.kbd-key {
+    padding: 0.1rem 0.35rem;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    color: var(--ink-dim);
+    background: var(--paper-raised);
+    font-weight: 600;
+}
+
+.ftr-compliance-badge {
+    font-family: var(--f-mono);
+    font-size: 0.625rem;
+    letter-spacing: 0.12em;
+    color: var(--ink-faint);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+.ftr-compliance-highlight {
+    color: var(--ink-dim);
+}

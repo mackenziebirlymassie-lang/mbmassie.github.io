@@ -1,0 +1,243 @@
+/**
+ * TYPOGRAPHY, RESET & BASE STRUCTURE
+ * Inspired by Ryoku Aesthetic & UI/UX ProMax Hierarchy
+ */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    background-color: var(--paper);
+    color-scheme: dark;
+}
+
+body {
+    background: var(--paper);
+    color: var(--ink-dim);
+    font-family: var(--f-sans);
+    font-size: 0.875rem; /* UI/UX ProMax: 14px body base */
+    line-height: 1.55;  /* UI/UX ProMax: 1.5–1.6 */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+    letter-spacing: -0.01em;
+}
+
+/* Subtle Film Grain Texture Overlay */
+body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    opacity: 0.035;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Accessibility: Skip to Content Link */
+.skip-link {
+    position: absolute;
+    top: -100px;
+    left: var(--gutter);
+    background: var(--bone);
+    color: var(--ink-on-bone);
+    padding: var(--s2) var(--s4);
+    font-family: var(--f-mono);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    border-radius: var(--radius);
+    z-index: 10000;
+    transition: top var(--snap) var(--ease-quad);
+}
+
+.skip-link:focus-visible {
+    top: 12px;
+    outline: 2px solid var(--sun);
+    outline-offset: 2px;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+button, input, textarea {
+    font-family: var(--f-sans);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+::-webkit-scrollbar-track {
+    background: var(--paper);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--line-strong);
+    border-radius: var(--radius);
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--ink-faint);
+}
+
+/* Selection Highlight */
+::selection {
+    background: var(--bone);
+    color: var(--ink-on-bone);
+}
+
+/* Typography Scale - UI/UX ProMax 3-tier hierarchy */
+h1, h2, h3, h4 {
+    font-family: var(--f-display);
+    color: var(--ink);
+    font-weight: 500;
+    line-height: 1.15;
+    letter-spacing: -0.025em;
+}
+
+.tag {
+    font-family: var(--f-mono);
+    font-size: 0.6875rem;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+}
+
+/* Structural Wrappers */
+.wrap {
+    max-width: var(--max);
+    margin-inline: auto;
+    padding-inline: var(--gutter);
+}
+
+.section {
+    border-top: 1px solid var(--line);
+    padding-block: var(--section-y);
+    position: relative;
+}
+
+/* UI/UX ProMax: Headings 28-36px */
+.section-h {
+    font-family: var(--f-display);
+    color: var(--ink);
+    font-size: clamp(1.75rem, 3.2vw, 2.25rem);
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    margin-bottom: var(--s4);
+}
+
+/* Section Sheet Banner (Signature Ryoku 3-Column Header) */
+.sheet-head {
+    align-items: center;
+    color: var(--ink-muted);
+    display: grid;
+    gap: var(--s3);
+    grid-template-columns: auto 1fr auto;
+    margin-bottom: clamp(1.5rem, 3vw, 2.5rem);
+    position: relative;
+    z-index: 1;
+}
+
+.sheet-head__n {
+    color: var(--ink);
+    font-family: var(--f-mono);
+    font-size: 0.6875rem;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+.sheet-head__rule {
+    border-bottom: 1px solid var(--line);
+    height: 0;
+    width: 100%;
+}
+
+.sheet-head__kanji {
+    color: var(--ink);
+    font-family: var(--f-jp);
+    font-size: 0.95rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+/* Keyframe Animations */
+@keyframes heroSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes watermarkFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50%) scale(0.95);
+    }
+    to {
+        opacity: 0.03;
+        transform: translateY(-50%) scale(1);
+    }
+}
+
+@keyframes haloRotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes beacon {
+    0% {
+        box-shadow: 0 0 0 0 var(--sun-glow);
+        opacity: 1;
+    }
+    60% {
+        box-shadow: 0 0 0 6px rgba(206, 94, 50, 0);
+        opacity: 0.8;
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(206, 94, 50, 0);
+        opacity: 1;
+    }
+}
+
+/* Scroll Reveal (Progressive Enhancement) */
+.js-ready .reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.75s var(--ease-fluid),
+                transform 0.75s var(--ease-fluid);
+    will-change: opacity, transform;
+}
+
+.js-ready .reveal.is-revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+

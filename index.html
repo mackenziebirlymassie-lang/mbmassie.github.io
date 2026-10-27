@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mackenzie Birly Massie · Freelance Developer &amp; Systems Architect</title>
+    <meta name="description" content="Freelance developer specializing in CLI tools, web applications, and simulated environments. Available for contract work.">
+    <meta name="author" content="Mackenzie Birly Massie">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://massie-virtual-os.netlify.app/">
+
+    <!-- Open Graph / Social Meta -->
+    <meta property="og:title" content="Mackenzie Birly Massie · Architectural Portfolio">
+    <meta property="og:description" content="Freelance developer specializing in CLI tools, web applications, and simulated environments.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://massie-virtual-os.netlify.app/">
+    <meta property="og:site_name" content="Mackenzie Birly Massie Portfolio">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:creator" content="@mbmassie">
+    <meta name="twitter:title" content="Mackenzie Birly Massie · Freelance Developer">
+    <meta name="twitter:description" content="CLI tools, web applications, and simulated environments.">
+
+    <!-- Schema.org JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Mackenzie Birly Massie",
+      "alternateName": "Massie",
+      "jobTitle": "Freelance Developer & Systems Architect",
+      "description": "Bespoke developer automation tooling, CLI architectures, and simulated environments.",
+      "url": "https://massie-virtual-os.netlify.app/",
+      "email": "mailto:kenziemassie13@gmail.com",
+      "sameAs": [
+        "https://github.com/mbmassie",
+        "https://linkedin.com/in/mbmassie",
+        "https://x.com/mbmassie"
+      ]
+    }
+    </script>
+
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+    <!-- Google Fonts: Fraunces, Space Grotesk, Space Mono, Noto Sans JP -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..800;1,9..144,300..800&family=Noto+Sans+JP:wght@400;500;700;900&family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <!-- Modular Stylesheets Bundle -->
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+    <!-- ========== Accessibility Skip Link ========== -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- ========== Right-Edge Vertical HUD Navigator (Ryoku Scroll Indicator) ========== -->
+    <aside class="hud-nav" id="hud-nav" aria-label="Section Quick Nav">
+        <a href="#home"       class="hud-tick active" title="Introduction" aria-label="Introduction"></a>
+        <a href="#about"      class="hud-tick" title="Identity"     aria-label="Identity"></a>
+        <a href="#experience" class="hud-tick" title="Timeline"     aria-label="Timeline"></a>
+        <a href="#skills"     class="hud-tick" title="Capabilities" aria-label="Capabilities"></a>
+        <a href="#projects"   class="hud-tick" title="Builds"       aria-label="Builds"></a>
+        <a href="#interests"  class="hud-tick" title="Axioms"       aria-label="Axioms"></a>
+        <a href="#contact"    class="hud-tick" title="Dispatch"     aria-label="Dispatch"></a>
+    </aside>
+
+    <!-- ========== Header & Top Navigation ========== -->
+    <header class="hdr" id="navbar">
+        <div class="hdr-in wrap">
+            <a href="#home" class="logo" aria-label="Home">
+                <span class="logo-mark" lang="ja">創</span>
+                <span class="logo-word">Massie</span>
+            </a>
+
+            <nav class="hdr-nav" aria-label="Primary Navigation">
+                <a href="#about"      class="hdr-link">About</a>
+                <a href="#experience" class="hdr-link">Experience</a>
+                <a href="#skills"     class="hdr-link">Skills</a>
+                <a href="#projects"   class="hdr-link">Projects</a>
+                <a href="#interests"  class="hdr-link">Philosophy</a>
+                <a href="#contact"    class="hdr-link">Contact</a>
+            </nav>
+
+            <div class="hdr-actions">
+                <div class="hdr-badge">
+                    <span class="hero-live" aria-hidden="true"></span>
+                    <span>CONTRACTS OPEN</span>
+                </div>
+                <button class="burger" id="burger" aria-label="Toggle navigation menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+
+        <nav class="sheet" id="sheet" aria-label="Mobile Navigation">
+            <a href="#about"      class="sheet-link">About</a>
+            <a href="#experience" class="sheet-link">Experience</a>
+            <a href="#skills"     class="sheet-link">Skills</a>
+            <a href="#projects"   class="sheet-link">Projects</a>
+            <a href="#interests"  class="sheet-link">Philosophy</a>
+            <a href="#contact"    class="sheet-link">Contact</a>
+        </nav>
+    </header>
+
+    <main id="main-content">
+
+        <!-- ========== Hero Section ========== -->
+        <section id="home" class="hero" aria-label="Introduction">
+            <div class="hero-halo" aria-hidden="true"></div>
+            <div class="hero-watermark" aria-hidden="true" lang="ja">創</div>
+
+            <div class="wrap hero-in">
+                <!-- Left Dossier Column -->
+                <div class="hero-dossier">
+                    <div class="rail">
+                        <span class="rail-label">Core</span>
+                        <span class="rail-pill">Node.js</span>
+                        <span class="rail-pill">ES6+</span>
+                        <span class="rail-label" style="margin-left: 6px;">Target</span>
+                        <span class="rail-pill">CLI Tools</span>
+                        <span class="rail-pill">Sim OS</span>
+                    </div>
+
+                    <div class="eyebrow tag">
+                        <span class="jp" lang="ja">創</span>
+                        <span class="eye-label">· MASSIE 2.0 · ARCHITECTURAL SYSTEM</span>
+                    </div>
+
+                    <h1 class="hero-id">Mackenzie<br>Birly Massie</h1>
+
+                    <div class="hero-subtitle">
+                        <span class="jp-motto" lang="ja">創と美のために</span>
+                        <span>for the sake of creation and craft</span>
+                    </div>
+
+                    <div class="hero-telem">
+                        <span class="hero-live" aria-hidden="true"></span>
+                        <span>AVAILABLE FOR Q4 2026 CONTRACT WORK</span>
+                    </div>
+
+                    <div class="hero-specs specs">
+                        <div class="spec">
+                            <span class="spec__k">Focus</span>
+                            <span class="spec__lead"></span>
+                            <span class="spec__v">CLI tools, web applications, simulated environments</span>
+                        </div>
+                        <div class="spec">
+                            <span class="spec__k">Stack</span>
+                            <span class="spec__lead"></span>
+                            <span class="spec__v">JavaScript (ES6+), Node.js, Canvas &amp; DOM</span>
+                        </div>
+                        <div class="spec">
+                            <span class="spec__k">Delivery</span>
+                            <span class="spec__lead"></span>
+                            <span class="spec__v">Contract architecture, custom development, systems design</span>
+                        </div>
+                        <div class="spec">
+                            <span class="spec__k">Status</span>
+                            <span class="spec__lead"></span>
+                            <span class="spec__v">Available · Independent / Remote Contract Engagements</span>
+                        </div>
+                    </div>
+
+                    <div class="hero-vitals vitals blueprint-card">
+                        <div class="vital">
+                            <span class="vital__n">4+</span>
+                            <span class="vital__l">Years Active</span>
+                        </div>
+                        <div class="vital">
+                            <span class="vital__n">10+</span>
+                            <span class="vital__l">Projects Delivered</span>
+                        </div>
+                        <div class="vital">
+                            <span class="vital__n">0%</span>
+                            <span class="vital__l">External Bloat</span>
+                        </div>
+                        <div class="vital">
+                            <span class="vital__n">100%</span>
+                            <span class="vital__l">Handcrafted</span>
+                        </div>
+                    </div>
+
+                    <div class="cli-box" id="cli-copy" data-command="npx massie --dossier" title="Click to copy terminal command" role="button" tabindex="0">
+                        <span class="cli-prompt">$</span>
+                        <span class="cli-cmd">npx massie --dossier</span>
+                        <span class="cli-badge" id="cli-badge">COPY</span>
+                    </div>
+
+                    <div class="hero-cta">
+                        <a href="#projects" class="btn btn-lg btn-solid">View Work</a>
+                        <a href="#contact"  class="btn btn-lg btn-outline">Get in Touch</a>
+                    </div>
+                </div>
+
+                <!-- Right Hero Artwork (Hermodorus of Salamis Dithered Statue) -->
+                <div class="hero-art-col" aria-hidden="true">
+                    <div class="hero-art-wrap">
+                        <img src="assets/hermodorus_dither.png" alt="Classical Greco-Roman marble bust representing Hermodorus of Salamis in halftone dither" class="hero-art-img" width="512" height="512">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== 01 About Section ========== -->
+        <section id="about" class="section" aria-label="About Identity">
+            <div class="wrap">
+                <div class="sheet-head reveal">
+                    <span class="sheet-head__n">01 // IDENTITY &amp; CORE FOCUS</span>
+                    <span class="sheet-head__rule"></span>
+                    <span class="sheet-head__kanji" lang="ja">人</span>
+                </div>
+
+                <div class="about-body">
+                    <div class="reveal">
+                        <h2 class="about-stmt">I build tools that developers use and interfaces that stay out of the way.</h2>
+                        <p class="about-lede">
+                            Most of my work falls into three areas: automation tooling for developer workflows, browser-based simulations and virtual environments, and full-stack web applications. I write JavaScript. I care about architecture that holds up under change and code that other people can read without a guide.
+                        </p>
+                    </div>
+                    <div class="about-aside reveal">
+                        <div class="about-aside-inner blueprint-card">
+                            <div class="about-aside-h">Profile Specification</div>
+                            <div class="about-aside-list">
+                                <div class="about-aside-item">
+                                    <span class="about-aside-k">Name</span>
+                                    <span class="about-aside-v">Mackenzie B. Massie</span>
+                                </div>
+                                <div class="about-aside-item">
+                                    <span class="about-aside-k">Role</span>
+                                    <span class="about-aside-v">Freelance Developer</span>
+                                </div>
+                                <div class="about-aside-item">
+                                    <span class="about-aside-k">Experience</span>
+                                    <span class="about-aside-v">4+ years</span>
+                                </div>
+                                <div class="about-aside-item">
+                                    <span class="about-aside-k">Status</span>
+                                    <span class="about-aside-v">Available</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== 02 Experience Section ========== -->
+        <section id="experience" class="section" aria-label="Experience History">
+            <div class="wrap">
+                <div class="sheet-head reveal">
+                    <span class="sheet-head__n">02 // WORK TIMELINE &amp; HISTORY</span>
+                    <span class="sheet-head__rule"></span>
+                    <span class="sheet-head__kanji" lang="ja">歴</span>
+                </div>
+
+                <h2 class="section-h reveal">Work history.</h2>
+
+                <div class="exp-list">
+                    <div class="exp-entry reveal">
+                        <div class="exp-top">
+                            <span class="exp-role">Senior Freelance Architect</span>
+                            <span class="exp-date">2026 · PRESENT</span>
+                        </div>
+                        <div class="exp-org">Independent / Remote</div>
+                        <div class="exp-bullets">
+                            <div class="exp-bullet">Built CLI tools for enterprise developer environments.</div>
+                            <div class="exp-bullet">Designed browser-based OS simulations with complex DOM interactions.</div>
+                        </div>
+                    </div>
+
+                    <div class="exp-entry reveal">
+                        <div class="exp-top">
+                            <span class="exp-role">Full Stack Developer</span>
+                            <span class="exp-date">2023 · 2026</span>
+                        </div>
+                        <div class="exp-org">Tech Agency</div>
+                        <div class="exp-bullets">
+                            <div class="exp-bullet">Maintained and migrated legacy systems to modern Node.js standards.</div>
+                            <div class="exp-bullet">Improved deployment pipelines, reducing build times by 40%.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== 03 Skills Section ========== -->
+        <section id="skills" class="section" aria-label="Skills and Capabilities">
+            <div class="wrap">
+                <div class="sheet-head reveal">
+                    <span class="sheet-head__n">03 // TECHNICAL CAPABILITIES</span>
+                    <span class="sheet-head__rule"></span>
+                    <span class="sheet-head__kanji" lang="ja">術</span>
+                </div>
+
+                <h2 class="section-h reveal">What I work with.</h2>
+
+                <div class="skills-grid">
+                    <div class="reveal">
+                        <h3 class="skills-col-h">Core Engine</h3>
+                        <ul class="skills-list">
+                            <li class="skill-item">JavaScript (ES6+)</li>
+                            <li class="skill-item">HTML5 / DOM API</li>
+                            <li class="skill-item">Canvas 2D / WebGL Contexts</li>
+                        </ul>
+                    </div>
+                    <div class="reveal">
+                        <h3 class="skills-col-h">System Stack</h3>
+                        <ul class="skills-list">
+                            <li class="skill-item">Modern CSS3 (Tokens &amp; Color-Mix)</li>
+                            <li class="skill-item">Node.js Runtimes &amp; Streams</li>
+                            <li class="skill-item">React Frameworks &amp; Next.js</li>
+                            <li class="skill-item">Databases (SQL / PostgreSQL / NoSQL)</li>
+                            <li class="skill-item">UI/UX Design Systems &amp; A11y</li>
+                            <li class="skill-item">Git Workflows &amp; CI/CD Pipelines</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== 04 Projects Section ========== -->
+        <section id="projects" class="section" aria-label="Selected Projects">
+            <div class="wrap">
+                <div class="sheet-head reveal">
+                    <span class="sheet-head__n">04 // SELECTED BUILDS &amp; REGISTRY</span>
+                    <span class="sheet-head__rule"></span>
+                    <span class="sheet-head__kanji" lang="ja">作</span>
+                </div>
+
+                <h2 class="section-h reveal">Selected builds.</h2>
+
+                <div class="projects-grid">
+                    <div class="card project blueprint-card reveal">
+                        <div class="project-meta-bar">
+                            <span class="project-num">MOD.01 // CLI-ENGINE</span>
+                            <span class="project-status-tag">STABLE · PROD</span>
+                        </div>
+                        <h3 class="project-name">Automated JS CLI</h3>
+                        <p class="project-desc">
+                            A command-line orchestration utility designed to automate developer tasks, manage asynchronous I/O pipelines, and provide responsive terminal UX without external runtime bloat.
+                        </p>
+                        
+                        <div class="mod-specs">
+                            <div class="mod-spec-row">
+                                <span class="mod-spec-k">INPUT</span>
+                                <span class="mod-spec-v">Developer terminal flags, raw directory manifests &amp; pipeline scripts</span>
+                            </div>
+                            <div class="mod-spec-row">
+                                <span class="mod-spec-k">ENGINE</span>
+                                <span class="mod-spec-v">Node.js · Commander.js engine · Custom async stream transforms</span>
+                            </div>
+                            <div class="mod-spec-row">
+                                <span class="mod-spec-k">OUTPUT</span>
+                                <span class="mod-spec-v">Deterministic stdout reports, structured file trees, build outputs</span>
+                            </div>
+                            <div class="mod-spec-row">
+                                <span class="mod-spec-k">STRENGTH</span>
+                                <span class="mod-spec-v">Zero external telemetry · 100% test coverage · Sub-50ms execution</span>
+                            </div>
+                        </div>
+
+                        <div class="project-tags">
+                            <span class="project-tag">NODE.JS</span>
+                            <span class="project-tag">CLI ARCHITECTURE</span>
+                            <span class="project-tag">AUTOMATION</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/mbmassie/automated-js-cli" target="_blank" rel="noopener noreferrer" class="project-link">Source Repository ↗</a>
+                        </div>
+                    </div>
+
+                    <div class="card project blueprint-card reveal">
+                        <div class="project-meta-bar">
+                            <span class="project-num">MOD.02 // VIRTUAL-ENV</span>
+                            <span class="project-status-tag">ACTIVE · BUILD</span>
+                        </div>
+                        <h3 class="project-name">Virtual OS Environment</h3>
+                        <p class="project-desc">
+                            A browser-based operating system simulation executing a custom window manager, virtual file system, and isolated process scheduling built purely with vanilla JavaScript and HTML5.
+                        </p>
+                        
+                        <div class="mod-specs">
+                            <div class="mod-spec-row">
+                                <span class="mod-spec-k">INPUT</span>
+                                <span class="mod-spec-v">User pointer events, virtual shell keyboard IO &amp; window coordinates</span>
+                            </div>
+                            <div class="mod-spec-row">
+                                <span class="mod-spec-k">ENGINE</span>
+                                <span class="mod-spec-v">Vanilla ES6+ · HTML5 DOM Bus · Microtask event loop scheduler</span>
+                            </div>
+                            <div class="mod-spec-row">
+                                <span class="mod-spec-k">OUTPUT</span>
+                                <span class="mod-spec-v">Multi-window canvas desktop, simulated process tree &amp; memory registry</span>
+                            </div>
+                            <div class="mod-spec-row">
+                                <span class="mod-spec-k">STRENGTH</span>
+                                <span class="mod-spec-v">Zero runtime frameworks · Sub-16ms smooth frame render loop</span>
+                            </div>
+                        </div>
+
+                        <div class="project-tags">
+                            <span class="project-tag">VANILLA JAVASCRIPT</span>
+                            <span class="project-tag">STATE ARCHITECTURE</span>
+                            <span class="project-tag">VIRTUAL FS</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://massie-virtual-os.netlify.app" target="_blank" rel="noopener noreferrer" class="project-link">Live Environment ↗</a>
+                            <a href="https://github.com/mbmassie/virtual-os" target="_blank" rel="noopener noreferrer" class="project-link">Source ↗</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== 05 Archetypes & Foundations ========== -->
+        <section id="interests" class="section" aria-label="Mental Models and Foundations">
+            <div class="wrap">
+                <div class="sheet-head reveal">
+                    <span class="sheet-head__n">05 // MENTAL MODELS &amp; AXIOMS</span>
+                    <span class="sheet-head__rule"></span>
+                    <span class="sheet-head__kanji" lang="ja">道</span>
+                </div>
+
+                <h2 class="section-h reveal">Mental models &amp; discipline.</h2>
+
+                <div class="bg-grid">
+                    <div class="card archetype-card blueprint-card reveal">
+                        <div class="archetype-header">
+                            <div class="archetype-meta">
+                                <span>ARCHETYPE // I · IV · XIV</span>
+                                <span>TAROT IN ARCHITECTURE</span>
+                            </div>
+                            <h3 class="archetype-title">Symbolic Engineering</h3>
+                        </div>
+                        <p class="archetype-p">
+                            I treat classic Tarot archetypes as mental models for technical execution, system governance, and communication clarity.
+                        </p>
+                        <div class="archetype-facets">
+                            <div class="archetype-facet">
+                                <strong>THE MAGICIAN (I)</strong>
+                                <span>Zero-to-one execution. Manifesting complete running systems and CLI tooling from clean, fundamental logic.</span>
+                            </div>
+                            <div class="archetype-facet">
+                                <strong>THE EMPEROR (IV)</strong>
+                                <span>Structural governance. Enforcing predictable state trees, deterministic APIs, and architecture that doesn't collapse under scale.</span>
+                            </div>
+                            <div class="archetype-facet">
+                                <strong>KING OF SWORDS</strong>
+                                <span>Radical clarity. Writing self-documenting code and clear interfaces that remove all ambiguity for future maintainers.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card archetype-card blueprint-card reveal">
+                        <div class="archetype-header">
+                            <div class="archetype-meta">
+                                <span>MODULAR // PHYSICAL-TO-DIGITAL</span>
+                                <span>STRUCTURAL INTEGRITY</span>
+                            </div>
+                            <h3 class="archetype-title">Lego Modular Logic</h3>
+                        </div>
+                        <p class="archetype-p">
+                            Physical construction informs how I construct software: sorting raw components by structural integrity, verifying the blueprint before locking connections, and avoiding brittle couplings.
+                        </p>
+                        <div class="archetype-facets">
+                            <div class="archetype-facet">
+                                <strong>COMPONENT INTEGRITY</strong>
+                                <span>Every function and module must be independently testable and hold its own weight before assembly.</span>
+                            </div>
+                            <div class="archetype-facet">
+                                <strong>INTERLOCKING BOUNDARIES</strong>
+                                <span>Clean, standardized interfaces allow any sub-system to be swapped or upgraded without rebuilding the entire structure.</span>
+                            </div>
+                            <div class="archetype-facet">
+                                <strong>BLUEPRINT DISCIPLINE</strong>
+                                <span>No guesswork in production. Architecture is confirmed upfront, keeping build execution fast and predictable.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card archetype-card blueprint-card reveal">
+                        <div class="archetype-header">
+                            <div class="archetype-meta">
+                                <span>SYSTEMS // COGNITIVE ENGINE</span>
+                                <span>PERSONAL OPERATING SYSTEM</span>
+                            </div>
+                            <h3 class="archetype-title">Routines &amp; Tooling</h3>
+                        </div>
+                        <p class="archetype-p">
+                            Developer productivity is an engineering problem. I build and refine systematic environments that protect deep focus and eliminate context switching.
+                        </p>
+                        <div class="archetype-facets">
+                            <div class="archetype-facet">
+                                <strong>TERMINAL FIRST</strong>
+                                <span>Keyboard-driven workflows, custom shell automation, and direct file manipulation for maximum throughput.</span>
+                            </div>
+                            <div class="archetype-facet">
+                                <strong>REUSABLE PATTERNS</strong>
+                                <span>Codified boilerplate architectures and deployment configs that accelerate client project delivery safely.</span>
+                            </div>
+                            <div class="archetype-facet">
+                                <strong>DAILY REVISION</strong>
+                                <span>Daily log audits, backlog grooming, and continuous maintenance of developer tooling setups.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== 06 Contact Section ========== -->
+        <section id="contact" class="section" aria-label="Contact and Inquiries">
+            <div class="wrap">
+                <div class="sheet-head reveal">
+                    <span class="sheet-head__n">06 // DISPATCH TERMINAL &amp; COMMS</span>
+                    <span class="sheet-head__rule"></span>
+                    <span class="sheet-head__kanji" lang="ja">信</span>
+                </div>
+
+                <div class="contact-grid">
+                    <div class="reveal">
+                        <h2 class="contact-stmt">Let's work together.</h2>
+                        <p class="contact-lede">
+                            Open for freelance projects and contract architecture. Send a message through the secure dispatch terminal or reach out directly via email.
+                        </p>
+
+                        <div class="contact-social">
+                            <a href="mailto:kenziemassie13@gmail.com" class="contact-social-link">Email ↗</a>
+                            <a href="https://github.com/mbmassie" target="_blank" rel="noopener noreferrer" class="contact-social-link">GitHub</a>
+                            <a href="https://linkedin.com/in/mbmassie" target="_blank" rel="noopener noreferrer" class="contact-social-link">LinkedIn</a>
+                            <a href="https://x.com/mbmassie" target="_blank" rel="noopener noreferrer" class="contact-social-link">Twitter</a>
+                        </div>
+                    </div>
+
+                    <form class="form reveal" id="contact-form" action="https://formsubmit.co/kenziemassie13@gmail.com" method="POST">
+                        <input type="hidden" name="_subject" value="New Portfolio Inquiry · Mackenzie Birly Massie">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_consent_status" value="Verified Affirmative Consent (UU PDP & GDPR)">
+                        <!-- Anti-Spam Honeypot Field -->
+                        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+                        <div class="form-head">
+                            <span class="form-title">New message</span>
+                            <span class="tag" lang="ja">信</span>
+                        </div>
+
+                        <div class="form-fields">
+                            <label class="field">
+                                <span class="field-label">Name</span>
+                                <input type="text" name="name" class="field-input" placeholder="Your name" required>
+                            </label>
+                            <label class="field">
+                                <span class="field-label">Email</span>
+                                <input type="email" name="email" class="field-input" placeholder="you@example.com" required>
+                            </label>
+                            <label class="field">
+                                <span class="field-label">Message</span>
+                                <textarea name="message" class="field-textarea" placeholder="What can I help with?" required></textarea>
+                            </label>
+
+                            <div class="field-consent">
+                                <label class="consent-label" for="consent-check">
+                                    <input type="checkbox" name="consent" id="consent-check" class="consent-checkbox" required>
+                                    <span class="consent-text">I consent to the processing of my contact information in accordance with the <a href="privacy-policy.html" target="_blank" rel="noopener noreferrer">Privacy Policy</a> (compliant with Indonesian UU PDP No. 27/2022 &amp; GDPR) and agree to the <a href="terms.html" target="_blank" rel="noopener noreferrer">Terms of Service</a>.</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-solid form-submit">Send Message</button>
+
+                        <div class="form-msg" id="form-msg">Message sent. I will reply shortly.</div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ========== Footer ========== -->
+    <footer class="ftr">
+        <div class="wrap">
+            <div class="ftr-top">
+                <div class="ftr-emblem">
+                    <div class="ftr-kanji" lang="ja">創</div>
+                    <div class="ftr-motto">For the sake of creation and craft.</div>
+                    <div class="ftr-motto-jp" lang="ja">創と美のために · 妥協のない建築</div>
+                </div>
+
+                <div class="ftr-cols">
+                    <div>
+                        <div class="ftr-col-h">Navigate</div>
+                        <div class="ftr-col-list">
+                            <a href="#about"      class="ftr-link">About</a>
+                            <a href="#experience" class="ftr-link">Experience</a>
+                            <a href="#skills"     class="ftr-link">Skills</a>
+                            <a href="#projects"   class="ftr-link">Projects</a>
+                            <a href="#interests"  class="ftr-link">Philosophy</a>
+                            <a href="#contact"    class="ftr-link">Contact</a>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="ftr-col-h">Elsewhere</div>
+                        <div class="ftr-col-list">
+                            <a href="mailto:kenziemassie13@gmail.com" class="ftr-link">kenziemassie13@gmail.com</a>
+                            <a href="https://github.com/mbmassie" target="_blank" rel="noopener noreferrer" class="ftr-link">GitHub</a>
+                            <a href="https://linkedin.com/in/mbmassie" target="_blank" rel="noopener noreferrer" class="ftr-link">LinkedIn</a>
+                            <a href="https://x.com/mbmassie" target="_blank" rel="noopener noreferrer" class="ftr-link">Twitter</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Massive Outline Typography Watermark -->
+            <div class="ftr-watermark" aria-hidden="true">MASSIE</div>
+
+            <div class="ftr-bottom">
+                <div class="kbd-guide">
+                    <span>NAV:</span>
+                    <span class="kbd-key">J</span>
+                    <span>/</span>
+                    <span class="kbd-key">K</span>
+                    <span>TO CYCLE SECTIONS</span>
+                </div>
+                <div class="ftr-compliance-badge">
+                    <span>COMPLIANCE:</span>
+                    <span class="ftr-compliance-highlight">ID UU PDP NO.27/2022 · EU GDPR · CCPA · UU ITE</span>
+                </div>
+                <span class="ftr-copy">&copy; 2026 Mackenzie Birly Massie · 創</span>
+                <div class="ftr-legal">
+                    <a href="privacy-policy.html" class="ftr-legal-link">Privacy Policy</a>
+                    <a href="terms.html" class="ftr-legal-link">Terms</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========== Modular Scripts Entrypoint ========== -->
+    <script type="module" src="js/main.js"></script>
+
+</body>
+</html>

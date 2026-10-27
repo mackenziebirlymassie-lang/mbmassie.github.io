@@ -1,0 +1,76 @@
+/**
+ * DESIGN TOKENS & SYSTEM VARIABLES
+ * Inspired by Ryoku Architectural Engine
+ * Enforcing UI/UX ProMax 8pt Spatial Scale & Strict Contracts
+ * Favicon Core Kanji: 創 (Sō / Creation & Craft)
+ */
+:root {
+    /* Color Palette - Absolute Dark & Warm Muted Titanium Bone */
+    --paper:               #000000;
+    --paper-raised:        #0a0a0a;
+    --paper-card:          #11100f;
+    --paper-hover:         #161514;
+    
+    /* Ink Hierarchy - Strict WCAG AAA Contrast against #000 */
+    --ink:                 #cdc4ba; /* Warm Titanium Bone (exact favicon ink) */
+    --ink-dim:             #b0a9a0;
+    --ink-muted:           #958f87;
+    --ink-faint:           #807a73;
+    
+    /* Boundary Lines - Dynamic Alpha Blending */
+    --line:                color-mix(in srgb, var(--ink) 24%, transparent);
+    --line-soft:           color-mix(in srgb, var(--ink) 12%, transparent);
+    --line-strong:         color-mix(in srgb, var(--ink) 42%, transparent);
+    
+    /* Ambient Elevation Tints */
+    --tint5:               color-mix(in srgb, var(--ink) 5%, transparent);
+    --tint10:              color-mix(in srgb, var(--ink) 10%, transparent);
+    --tint16:              color-mix(in srgb, var(--ink) 16%, transparent);
+    
+    /* Interactive Element Accents */
+    --bone:                var(--ink);
+    --bone-hover:          #ded6cc;
+    --bone-active:         #9e9789;
+    --ink-on-bone:         #000000;
+    --ink-on-bone-dim:     color-mix(in srgb, var(--paper) 75%, transparent);
+    
+    /* Telemetry & Accent Signal */
+    --sun:                 #ce5e32; /* Cinnabar / Amber Signal */
+    --sun-glow:            rgba(206, 94, 50, 0.4);
+    
+    /* Typography Stack */
+    --f-display:           'Fraunces', ui-serif, Georgia, serif;
+    --f-sans:              'Space Grotesk', system-ui, -apple-system, sans-serif;
+    --f-mono:              'Space Mono', 'JetBrainsMono Nerd Font', 'JetBrains Mono', ui-monospace, monospace;
+    --f-jp:                'Noto Sans JP', sans-serif;
+
+    /* Metrics & Geometry */
+    --radius:              2px;
+    --radius-md:           4px;
+    --max:                 1240px;
+    --wide:                1440px;
+    --gutter:              clamp(1.25rem, 4vw, 3rem);
+
+    /* Strict 8pt Spatial Scale (UI/UX ProMax Standard) */
+    --s1:                  4px;
+    --s2:                  8px;
+    --s3:                  12px;
+    --s4:                  16px;
+    --s5:                  24px;
+    --s6:                  32px;
+    --s7:                  48px;
+    --s8:                  64px;
+    --s9:                  80px;
+    --s10:                 96px;
+
+    /* Micro-motion & Transition Timings */
+    --snap:                90ms;
+    --move:                180ms;
+    --swap:                240ms;
+    --ease-out:            cubic-bezier(0.215, 0.61, 0.355, 1);
+    --ease-quad:           cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --ease-fluid:          cubic-bezier(0.16, 1, 0.3, 1);
+
+    --section-y:           clamp(3.5rem, 7vw, 6rem);
+}
+

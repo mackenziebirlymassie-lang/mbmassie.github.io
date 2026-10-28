@@ -1,6 +1,4 @@
 User-agent: *
 Allow: /
 
-# Sitemap Index
-Sitemap: https://massie-virtual-os.netlify.app/sitemap.xml
-
+Sitemap: https://mackenziebirlymassie-lang.github.io/mbmassie.github.io/sitemap.xml

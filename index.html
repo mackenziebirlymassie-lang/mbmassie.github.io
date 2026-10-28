@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https:; connect-src 'self' https://formsubmit.co; frame-ancestors 'none'; base-uri 'self'; form-action 'self' https://formsubmit.co;">
     <meta name="google-site-verification" content="google37dcef01186a76de" />
     <title>Mackenzie Birly Massie · Freelance Developer &amp; Systems Architect</title>
     <meta name="description" content="Freelance developer specializing in CLI tools, web applications, and simulated environments. Available for contract work.">
@@ -181,9 +182,9 @@
                         </div>
                     </div>
 
-                    <div class="cli-box" id="cli-copy" data-command="npx massie --dossier" title="Click to copy terminal command" role="button" tabindex="0">
+                    <div class="cli-box" id="cli-copy" data-command="git clone https://github.com/mackenziebirlymassie-lang/automated-js-cli.git" title="Click to copy repository clone command" role="button" tabindex="0">
                         <span class="cli-prompt">$</span>
-                        <span class="cli-cmd">npx massie --dossier</span>
+                        <span class="cli-cmd">git clone .../automated-js-cli.git</span>
                         <span class="cli-badge" id="cli-badge">COPY</span>
                     </div>
 
@@ -405,8 +406,8 @@
                             <span class="project-tag">VIRTUAL FS</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://massie-virtual-os.netlify.app" target="_blank" rel="noopener noreferrer" class="project-link">Live Environment ↗</a>
-                            <a href=https://github.com/mackenziebirlymassie-lang/virtual-os" target="_blank" rel="noopener noreferrer" class="project-link">Source ↗</a>
+
+                            <a href="https://github.com/mackenziebirlymassie-lang/virtual-os" target="_blank" rel="noopener noreferrer" class="project-link">Source Repository ↗</a>
                         </div>
                     </div>
                 </div>
@@ -527,7 +528,7 @@
 
                         <div class="contact-social">
                             <a href="mailto:kenziemassie13@gmail.com" class="contact-social-link">Email ↗</a>
-                            <a href="https://github.com/mbmassie" target="_blank" rel="noopener noreferrer" class="contact-social-link">GitHub</a>
+                            <a href="https://github.com/mackenziebirlymassie-lang" target="_blank" rel="noopener noreferrer" class="contact-social-link">GitHub</a>
                             <a href="https://linkedin.com/in/mbmassie" target="_blank" rel="noopener noreferrer" class="contact-social-link">LinkedIn</a>
                             <a href="https://x.com/mbmassie" target="_blank" rel="noopener noreferrer" class="contact-social-link">Twitter</a>
                         </div>
@@ -535,7 +536,7 @@
 
                     <form class="form reveal" id="contact-form" action="https://formsubmit.co/kenziemassie13@gmail.com" method="POST">
                         <input type="hidden" name="_subject" value="New Portfolio Inquiry · Mackenzie Birly Massie">
-                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_captcha" value="true">
                         <input type="hidden" name="_template" value="table">
                         <input type="hidden" name="_consent_status" value="Verified Affirmative Consent (UU PDP & GDPR)">
                         <!-- Anti-Spam Honeypot Field -->

@@ -41,7 +41,7 @@
     /* Typography Stack */
     --f-display:           'Fraunces', ui-serif, Georgia, serif;
     --f-sans:              'Space Grotesk', system-ui, -apple-system, sans-serif;
-    --f-mono:              'Space Mono', 'JetBrainsMono Nerd Font', 'JetBrains Mono', ui-monospace, monospace;
+    --f-mono:              'Space Mono', ui-monospace, monospace;
     --f-jp:                'Noto Sans JP', sans-serif;
 
     /* Metrics & Geometry */

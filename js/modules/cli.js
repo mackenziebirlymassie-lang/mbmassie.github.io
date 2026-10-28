@@ -8,8 +8,8 @@ export function initCliBox() {
 
     if (!cliBox || !badge) return;
 
-    cliBox.addEventListener('click', async () => {
-        const cmd = cliBox.getAttribute('data-command') || 'npx massie --dossier';
+    const copyCommand = async () => {
+        const cmd = cliBox.getAttribute('data-command') || 'git clone https://github.com/mackenziebirlymassie-lang/automated-js-cli.git';
 
         try {
             await navigator.clipboard.writeText(cmd);
@@ -25,6 +25,13 @@ export function initCliBox() {
         } catch (err) {
             console.error('Failed to copy CLI command:', err);
         }
+    };
+
+    cliBox.addEventListener('click', copyCommand);
+    cliBox.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            copyCommand();
+        }
     });
 }
-

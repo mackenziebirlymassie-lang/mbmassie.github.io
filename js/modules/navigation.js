@@ -1,37 +1,43 @@
 /**
- * NAVIGATION & RESPONSIVE DRAWER
- * Header backdrop threshold, mobile drawer, and HUD scroll spy
+ * NAVIGATION, RESPONSIVE DRAWER & SCROLL SPY
  */
 export function initNavigation() {
     const navbar = document.getElementById('navbar');
     const burger = document.getElementById('burger');
     const sheet  = document.getElementById('sheet');
-    const hudTicks = document.querySelectorAll('.hud-tick');
-    const sections = Array.from(document.querySelectorAll('section'));
+    const navLinks = document.querySelectorAll('.hdr-link');
+    const sections = document.querySelectorAll('section[id]');
 
-    if (navbar) {
-        const updateNav = () => {
-            navbar.classList.toggle('solid', window.scrollY > 40);
+    if (!navbar) return;
 
-            // Scroll spy for HUD ticks
-            if (hudTicks.length && sections.length) {
-                const scrollPos = window.scrollY + window.innerHeight * 0.35;
-                let activeId = sections[0].id;
-                for (let i = 0; i < sections.length; i++) {
-                    if (sections[i].offsetTop <= scrollPos) {
-                        activeId = sections[i].id;
-                    }
-                }
-                hudTicks.forEach((tick) => {
-                    const href = tick.getAttribute('href');
-                    tick.classList.toggle('active', href === `#${activeId}`);
-                });
+    // Navbar background & ScrollSpy on scroll
+    const onScroll = () => {
+        navbar.classList.toggle('solid', window.scrollY > 40);
+
+        // ScrollSpy
+        let currentSectionId = '';
+        const scrollPos = window.scrollY + 120;
+
+        sections.forEach((sec) => {
+            const top = sec.offsetTop;
+            const height = sec.offsetHeight;
+            if (scrollPos >= top && scrollPos < top + height) {
+                currentSectionId = sec.getAttribute('id');
             }
-        };
+        });
 
-        window.addEventListener('scroll', updateNav, { passive: true });
-        updateNav();
-    }
+        navLinks.forEach((link) => {
+            const href = link.getAttribute('href');
+            if (href === `#${currentSectionId}`) {
+                link.style.color = 'var(--ink)';
+            } else {
+                link.style.color = '';
+            }
+        });
+    };
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
 
     if (!burger || !sheet) return;
 

@@ -9,7 +9,7 @@ export function initCliBox() {
     if (!cliBox || !badge) return;
 
     const copyCommand = async () => {
-        const cmd = cliBox.getAttribute('data-command') || 'git clone https://github.com/mackenziebirlymassie-lang/automated-js-cli.git';
+        const cmd = cliBox.getAttribute('data-command') || 'git clone https://github.com/mackenziebirlymassie-lang/steamforge-cli-WIP.git';
 
         try {
             await navigator.clipboard.writeText(cmd);

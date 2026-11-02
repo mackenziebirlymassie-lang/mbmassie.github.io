@@ -834,6 +834,172 @@
     display: block;
 }
 
+/* --- Contact OR Divider & Alternate Phone/WhatsApp Dispatch --- */
+.contact-or {
+    display: flex;
+    align-items: center;
+    gap: var(--s3);
+    margin: var(--s4) 0;
+}
+
+.contact-or-line {
+    flex: 1;
+    height: 1px;
+    background: var(--line-soft);
+}
+
+.contact-or-text {
+    font-family: var(--f-mono);
+    font-size: 0.6875rem;
+    letter-spacing: 0.16em;
+    color: var(--ink-faint);
+    text-transform: uppercase;
+}
+
+.contact-alt-option {
+    display: flex;
+    flex-direction: column;
+    gap: var(--s3);
+    background: var(--paper-card);
+    border: 1px solid var(--line-soft);
+    border-radius: var(--radius);
+    padding: var(--s3) var(--s4);
+}
+
+.contact-alt-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: var(--s1);
+}
+
+.contact-alt-label {
+    font-family: var(--f-mono);
+    font-size: 0.625rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    color: var(--ink-faint);
+    text-transform: uppercase;
+}
+
+.contact-alt-note {
+    font-family: var(--f-mono);
+    font-size: 0.6875rem;
+    color: var(--ink-muted);
+}
+
+.contact-alt-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--s2);
+}
+
+.contact-alt-btn {
+    width: 100%;
+    padding: 0.55rem 0.75rem;
+    font-size: 0.6875rem;
+    letter-spacing: 0.08em;
+    gap: 0.45rem;
+    background: var(--paper-raised);
+    border-color: var(--line-soft);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-alt-btn:hover {
+    border-color: var(--line-strong);
+    color: var(--ink);
+    background: var(--paper-hover);
+}
+
+.contact-alt-phone {
+    color: var(--ink);
+}
+
+.contact-alt-wa {
+    color: var(--ink-dim);
+}
+
+.contact-direct-card {
+    margin-bottom: var(--s4);
+    padding: var(--s3) var(--s4);
+    background: var(--paper-raised);
+    border: 1px solid var(--line-soft);
+    border-radius: var(--radius);
+    display: flex;
+    flex-direction: column;
+    gap: var(--s1);
+}
+
+.contact-direct-k {
+    font-family: var(--f-mono);
+    font-size: 0.625rem;
+    letter-spacing: 0.16em;
+    color: var(--ink-faint);
+    text-transform: uppercase;
+}
+
+.contact-direct-body {
+    display: flex;
+    align-items: center;
+    gap: var(--s2);
+    flex-wrap: wrap;
+}
+
+.contact-direct-phone {
+    font-family: var(--f-mono);
+    font-size: 0.9375rem;
+    font-weight: 600;
+    color: var(--ink);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    transition: color var(--snap) var(--ease-quad);
+}
+
+.contact-direct-phone:hover {
+    color: var(--bone-hover);
+    text-decoration: underline;
+}
+
+.phone-pulse {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--sun);
+    box-shadow: 0 0 8px var(--sun-glow);
+    display: inline-block;
+}
+
+.contact-direct-sep {
+    color: var(--ink-faint);
+    font-size: 0.8rem;
+}
+
+.contact-direct-wa {
+    font-family: var(--f-mono);
+    font-size: 0.75rem;
+    color: var(--ink-dim);
+    text-decoration: none;
+    letter-spacing: 0.05em;
+    transition: color var(--snap) var(--ease-quad);
+}
+
+.contact-direct-wa:hover {
+    color: var(--ink);
+}
+
+@media (max-width: 520px) {
+    .contact-alt-actions {
+        grid-template-columns: 1fr;
+    }
+}
+
+
 /* ==========================================================================
    9. Footer Section (Signature Ryoku Outline Watermark & Kanji Anchor)
    ========================================================================== */

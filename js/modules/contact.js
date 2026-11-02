@@ -66,11 +66,11 @@ export function initContactForm() {
                 form.reset();
             } else {
                 const note = (data && data.message) ? data.message : 'Unable to complete transmission.';
-                msg.textContent = `Transmission notice: ${note} You can also email directly to kenziemassie13@gmail.com`;
+                msg.textContent = `Transmission notice: ${note} You can also email kenziemassie13@gmail.com or call/WhatsApp 081314737523.`;
                 msg.classList.add('show');
             }
         } catch (error) {
-            msg.textContent = 'Network notice: Unable to complete transmission. You can email directly to kenziemassie13@gmail.com';
+            msg.textContent = 'Network notice: Unable to complete transmission. You can email kenziemassie13@gmail.com or call/WhatsApp 081314737523.';
             msg.classList.add('show');
         } finally {
             submitBtn.disabled = false;

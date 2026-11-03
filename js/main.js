@@ -7,6 +7,7 @@ import { initNavigation }   from './modules/navigation.js';
 import { initContactForm }  from './modules/contact.js';
 import { initCliBox }       from './modules/cli.js';
 import { initKeyNav }       from './modules/keynav.js';
+import { initFaqAccordion } from './modules/faq.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     initScrollReveal();
@@ -14,5 +15,6 @@ document.addEventListener('DOMContentLoaded', () => {
     initContactForm();
     initCliBox();
     initKeyNav();
+    initFaqAccordion();
 });
 

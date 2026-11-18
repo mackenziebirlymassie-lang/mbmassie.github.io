@@ -897,22 +897,31 @@
 
 .contact-alt-btn {
     width: 100%;
-    padding: 0.55rem 0.75rem;
+    padding: 0.625rem 0.85rem;
     font-size: 0.6875rem;
     letter-spacing: 0.08em;
-    gap: 0.45rem;
+    gap: 0.5rem;
     background: var(--paper-raised);
-    border-color: var(--line-soft);
+    border: 1px solid var(--line-soft);
+    border-radius: var(--radius);
     text-decoration: none;
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    transition: all var(--snap) var(--ease-quad);
 }
 
 .contact-alt-btn:hover {
     border-color: var(--line-strong);
     color: var(--ink);
     background: var(--paper-hover);
+    transform: translateY(-1px);
+}
+
+.contact-alt-btn svg {
+    flex-shrink: 0;
+    width: 14px;
+    height: 14px;
 }
 
 .contact-alt-phone {
@@ -957,13 +966,24 @@
     text-decoration: none;
     display: inline-flex;
     align-items: center;
-    gap: 0.45rem;
-    transition: color var(--snap) var(--ease-quad);
+    gap: 0.5rem;
+    padding: 0.25rem 0.55rem;
+    border: 1px solid var(--line-soft);
+    border-radius: var(--radius);
+    background: var(--paper-card);
+    transition: all var(--snap) var(--ease-quad);
 }
 
 .contact-direct-phone:hover {
     color: var(--bone-hover);
-    text-decoration: underline;
+    border-color: var(--line-strong);
+    background: var(--paper-hover);
+    text-decoration: none;
+}
+
+.contact-direct-phone svg {
+    flex-shrink: 0;
+    color: var(--sun);
 }
 
 .phone-pulse {
@@ -973,6 +993,7 @@
     background: var(--sun);
     box-shadow: 0 0 8px var(--sun-glow);
     display: inline-block;
+    flex-shrink: 0;
 }
 
 .contact-direct-sep {
@@ -986,10 +1007,29 @@
     color: var(--ink-dim);
     text-decoration: none;
     letter-spacing: 0.05em;
-    transition: color var(--snap) var(--ease-quad);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.25rem 0.55rem;
+    border: 1px solid var(--line-soft);
+    border-radius: var(--radius);
+    background: var(--paper-card);
+    transition: all var(--snap) var(--ease-quad);
 }
 
 .contact-direct-wa:hover {
+    color: var(--ink);
+    border-color: var(--line-strong);
+    background: var(--paper-hover);
+}
+
+.contact-direct-wa svg {
+    flex-shrink: 0;
+    color: var(--ink-dim);
+    transition: color var(--snap) var(--ease-quad);
+}
+
+.contact-direct-wa:hover svg {
     color: var(--ink);
 }
 

@@ -137,7 +137,7 @@
     color: var(--ink-dim);
     border: 1px solid var(--line-soft);
     padding: 0.25rem 0.625rem;
-    border-radius: 999px;
+    border-radius: var(--radius);
     background: var(--paper-raised);
     transition: border-color var(--snap) var(--ease-quad);
 }
